@@ -39,7 +39,10 @@ var session = require('express-session');
 app.use(session({
   secret:"s3Cur3",
   key: "sessionId",
+//-- BEGIN CODISCOPE PATCH (SEE LICENSE) --//
   cookie: {
+		secure: true,
+//-- END CODISCOPE PATCH --//
     domain: '.example.com',
     path: '/admin',
   //  secure: true
